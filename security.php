@@ -74,7 +74,38 @@
             $result["password"] = htmlspecialchars($_POST["password"]);
         }
 
+
+
+
+    function security_deleteUser() {
+        security_validate();
+        $result = security_sanitize();
+        datebase_deleteUser($result["username"], $result["password"]);
+    }
+    
+    function security_updatePassword() {
+        $status = false;
+
+        if(isset($_POST["username"]) and isset($_POST["password"]) and isset($_POST["newPassword"])) {
+            $status = true;
+        }
+        return $status;
+
+        $result = [
+            "username" => null,
+            "password" => null
+        ];
+
+        if($status == true) {
+
+            $result["username"] =htmlspecialchars($_POST["username"]);
+            $result["password"] =htmlspecialchars($_POST["password"]);
+            $result["newPassword"] =htmlspecialchars($_POST["newPassword"]);
+        }
+        
         // Return array
         return $result;
+        database_updatePassword($result["username"], $result["password"], $result["newPassword"]);
     }
+}
 ?>
