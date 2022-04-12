@@ -62,20 +62,24 @@
     function database_deleteUser($username, $password) {
         global $connection;
 
-    database_verifyUser($username, $password);
+         $status = database_verifyUser($username, $password);
 
-    $deleteUsers = "DELETE FROM users WHERE username = '{$username}'";
-
-    mysqli_query($connection, $deleteUsers);
+        if($status) {
+            $deleteUsers = "DELETE FROM users WHERE username = '{$username}'";
+            mysqli_query($connection, $deleteUsers);
+        }
 }
     function database_updatePassword($username, $password, $newPassword) {
         global $connection;
 
-        database_verifyUser($username, $password);
+        $status = database_verifyUser($username, $password);
 
-        $updatePasswords = "UPDATE users SET password" = '{$newPassword}' WHERE username = '{$username}'";
+        if($status) {
 
-        mysqli_query($connection, $updatePasswords);
+            $newPassword = password_hash($newPassword, PASSWORD_DEFAULT);
+            $updatePasswords = "UPDATE users SET password = '{$newPassword}' WHERE username = '{$username}'";
+            mysqli_query($connection, $updatePasswords);
+        }
     }
         function database_close() {
         // user global connection
@@ -85,4 +89,3 @@
             mysqli_close($connection);
         }
     }
-?>
