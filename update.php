@@ -14,6 +14,9 @@
             <label>New Password:</label>
                 <input type="password" name="newPassword" />
             <input type="submit" />
+        else {
+            <a href='signup.php'>You need to be signed up to have access to this page. Please sign up here.</a>;
+        }
         </form>
     </body>
 </html>

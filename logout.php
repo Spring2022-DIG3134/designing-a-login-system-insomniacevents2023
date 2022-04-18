@@ -1,4 +1,5 @@
 <?php
+  include("login.php");
   require_once("security.php");
   security_logout();
 ?>
@@ -12,7 +13,12 @@
     <title>Document</title>
 </head>
 <body>
+  if (security_loggedIn()) {
     <p>You are logged out</p>
-    <a href="signup.php">Sign Up</a> or <a href="login.php">Login</a>
+    <a href="login.php">Click to log</a>
+  }
+  else{
+    <a href='index.php'> Main Menu</a>;
+  }
 </body>
 </html>

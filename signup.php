@@ -1,4 +1,5 @@
 <?php
+  include("security.php");
   require_once("security.php");
   $created=false;
   if(security_validate()){
@@ -17,7 +18,7 @@
 </head>
 <body>
 <?php if(!security_loggedIn() && !$created): ?>
-    <p><a href="login.php">Log In</a> or Sign Up Below</p>
+    <p><a href="index.php">Log In</a> or Sign Up Below</p>
     <form method="POST" action="signup.php">
        <input type="text" placeholder="User Name" name="username">
        <input type="password" placeholder="Password" name="password">
