@@ -14,7 +14,7 @@
                 <input type="password" name="password" />
             <input type="submit" />
         
-            <a href='signup.php'> Sign up here.</a>;
+            <a href='signup.php'> Sign up here.</a>
         
         </form>  
     </body>    
