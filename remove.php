@@ -13,9 +13,9 @@
             <label>Password:</label>
                 <input type="password" name="password" />
             <input type="submit" />
-        else {
+        
             <a href='signup.php'> Sign up here.</a>;
-        }
+        
         </form>  
     </body>    
 </html>      
