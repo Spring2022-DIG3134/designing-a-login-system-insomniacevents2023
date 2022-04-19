@@ -1,5 +1,5 @@
 <?php
-    INCLUDE("security.php");
+    require_once("security.php");
     security_updatePassword();
 ?>
 

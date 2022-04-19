@@ -1,6 +1,6 @@
 <?php
     require_once("login.php");
-    include("security.php");
+    require_once("security.php");
  ?>
  
  <html>
@@ -10,9 +10,6 @@
     </head>
 
     <body>
-
-        <!-- If logged in, show logged in options.-->
-        <!-- If not, present login and sign up options.-->
 
         <?php     
             if (security_loggedIn()) {

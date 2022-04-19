@@ -1,5 +1,4 @@
 <?php
-  include("security.php");
   require_once("security.php");
   if(security_validate()){
     security_login();
@@ -24,7 +23,7 @@
        <button type="submit">Login</button>
     </form> 
 <?php else: ?>
-    You are logged in. <a href="logout.php">Logout</a>
+    You are logged in. <a href="index.php">Go Home</a>
 <?php endif; ?>    
 </body>
 </html>
