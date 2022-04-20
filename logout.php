@@ -17,7 +17,7 @@
     <p>You are logged out</p>
     <a href="login.php">Click to log</a>
   <?php  else:  ?>
-    <a href='index.php'> Main Menu</a>;
+    <a href="index.php"> Main Menu</a>
   <?php endif; ?>
 </body>
 </html>

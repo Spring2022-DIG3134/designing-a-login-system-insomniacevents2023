@@ -13,7 +13,6 @@
 
         <?php     
             if (security_loggedIn()) {
-                echo("You are logged in!");
                 echo("<a href='update.php'> Update your login info here.</a>");
                 echo("<a href='remove.php'> Delete your account here.</a>");
 

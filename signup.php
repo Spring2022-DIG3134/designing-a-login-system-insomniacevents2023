@@ -18,7 +18,7 @@
 <body>
 <?php if(!security_loggedIn() && !$created): ?>
     <p><a href="index.php">Log In</a> or Sign Up Below</p>
-    <form method="POST" action="signup.php">
+    <form action="signup.php" method="POST">
        <input type="text" placeholder="User Name" name="username">
        <input type="password" placeholder="Password" name="password">
        <button type="submit">Sign Up</button>
